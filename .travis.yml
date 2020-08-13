@@ -1,4 +1,13 @@
-arch: arm32
+language: minimal
+os: linux
+dist: focal
+
+arch:
+  - amd64
+  - arm64
+  - ppc64le
+  - s390x
+
 services:
   - docker
  
@@ -7,5 +16,4 @@ jobs:
     - stage: build docker image
       script:
       - docker build -t test-image .
-    - stage: test
-      script: docker run --rm test-image
+      - docker run --rm test-image
