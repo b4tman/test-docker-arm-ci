@@ -1,0 +1,11 @@
+arch: arm32
+services:
+  - docker
+ 
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - docker build -t test-image .
+    - stage: test
+      script: docker run --rm test-image
