@@ -11,9 +11,6 @@ arch:
 services:
   - docker
  
-jobs:
-  include:
-    - stage: build docker image
-      script:
-      - docker build -t test-image .
-      - docker run --rm test-image
+script:
+  - docker build -t test-image .
+  - docker run --rm test-image
