@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: docker
+name: arm32
+platform:
+  os: linux
+  arch: arm
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    repo: temp/test
+    dry_run: true
+    purge: true
+trigger:
+  branch:
+    - master
