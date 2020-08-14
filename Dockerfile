@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM busybox:latest
 
 RUN echo \
     echo "Building on: $(uname -a)" && \
