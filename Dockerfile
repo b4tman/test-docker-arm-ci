@@ -8,15 +8,7 @@ ARG BUILDARCH
 ARG BUILDVARIANT
 
 RUN echo \
-    echo "Building on: $(uname -m)" && \
-    echo && \
-    echo "Build platform: $BUILDPLATFORM" && \
-    echo "Build arch:     $BUILDARCH" && \
-    echo "Build variant:  $BUILDVARIANT" && \
-    echo && \
-    echo "Target platform: $TARGETPLATFORM" && \
-    echo "Target arch:     $TARGETARCH" && \
-    echo "Target variant:  $TARGETVARIANT" && \
+    echo "Building on: $(uname -a)" && \
     echo
 
 CMD ["uname", "-m"]
