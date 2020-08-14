@@ -1,7 +1,7 @@
 FROM busybox:latest
 
-RUN echo \
-    "Building on: $(uname -a)" \
-    
+RUN echo -e "\n\
+    Building on: $(uname -a) \n\
+    "
 
 CMD ["uname", "-m"]
