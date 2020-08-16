@@ -9,9 +9,13 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    repo: temp/test
-    dry_run: true
-    purge: true
+    repo: docker.pkg.github.com/b4tman/test-docker-arm-ci/test
+    auto_tag: true
+    pull_image: true
+    registry: docker.pkg.github.com
+    username: b4tman
+    password:
+      from_secret: github_password
 trigger:
   branch:
     - master
